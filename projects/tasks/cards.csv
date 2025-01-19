@@ -1,0 +1,40 @@
+id,quantity,name,description,type,stat_atk,stat_healing,cost,image
+test,1,Really Really Long Description Here,,label,,,,
+12-gauge-pigtails,1,12 Gauge Pigtails,,label,,,,
+12-gauge-pigtails-ground,1,12 Gauge Pigtails (Ground),,label,,,,
+14-gauge-pigtails,1,14 Gauge Pigtails,,label,,,,
+camera-rigging-gear,1,Camera Rigging Gear,,label,,,,
+display-arm-parts,1,Display Arm Parts,,label,,,,
+drywall-anchors,1,Drywall Anchors,,label,,,,
+electrical,1,Electrical,,label,,,,
+electrical-plates,1,Electrical Plates,,label,,,,
+electrical-receptacles,1,Electrical Receptacles,,label,,,,
+electrical-tools,1,Electrical Tools,,label,,,,
+fasteners,1,Fasteners,,label,,,,
+furniture-spare-parts,1,Furniture Spare Parts,,label,,,,
+junction-box-screws,1,Junction Box Screws,,label,,,,
+lever-connectors,1,Lever Connectors,,label,,,,
+machine-screws,1,Machine Screws,,label,,,,
+mounting-gear,1,Mounting Gear,,label,,,,
+nails,1,Nails,,label,,,,
+pegboard-accessories,1,Pegboard Accessories,,label,,,,
+plate-screws,1,Plate Screws,,label,,,,
+solder,1,Solder,,label,,,,
+wood-screws,1,Wood Screws,,label,,,,
+a,1,A,,letter,,,,
+b,1,B,,letter,,,,
+c,1,C,,letter,,,,
+d,1,D,,letter,,,,
+e,1,E,,letter,,,,
+f,1,F,,letter,,,,
+g,1,G,,letter,,,,
+h,1,H,,letter,,,,
+i,1,I,,letter,,,,
+write,1,Write,Write 7500 bytes.,daily,,5,1,
+goblin,1,Fire Goblin,A tiny little fire goblin. He <strong>hot</strong>.,fire,5,,1,projects/tasks/im/fire_goblin.jpg
+wight,1,Wight,Used to be a famous singer.,undead,10,,2,projects/tasks/im/wight.jpg
+pory,1,Pory,What even **is** this thing?,fairy,1,,1,projects/tasks/im/pory.jpg
+natural_elixir,1,Nature's Elixir.,So <em>fancy</em>.//This will heal any ailments.,nature,,5,1,projects/tasks/im/natural_elixir.jpg
+foobear,1,Foobear,"It's <em>huge</em>.
+
+Hope we don't get caught by it.",nature,15,,3,projects/tasks/im/werebear.jpg
