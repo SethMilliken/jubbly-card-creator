@@ -1,4 +1,4 @@
-<!doctype html>
+<! doctype html>
 <html class="no-js" lang="">
 
     <head>
@@ -35,14 +35,14 @@
             // refresh the page (which you'll be doing a lot)
             units: $persist('mm'),
             card_width: $persist(63),
-            card_height: $persist(88),
-            card_bleed: $persist(3),
+            card_height: $persist(84),
+            card_bleed: $persist(0),
             page_width: $persist(210),
             page_height: $persist(297),
             card_cols_per_page: $persist(3),
             card_rows_per_page: $persist(3),
             center: $persist('1/1'),
-            page_name: $persist('individual'),
+            page_name: $persist('letter'),
 
             // If you're running via a local web server, you can use this to load examples.
             // modern: poker size (63 x 88mm)
@@ -58,17 +58,17 @@
             // optional card.css (for including css)
             //
             // This will overwrite 'file' and 'template' options below.
-            project: null,
+            project: 'tasks',
 
             // If you are able to run a local webserver, then put the relative filename
             // to the csv file here
-            file: null,
+            file: 'projects/tasks/card.csv',
 
             // Template file (e.g. 'card.html')
             template: 'card.html',
 
             // Set to true to enable inline card html
-            inline_card_html: false,
+            inline_card_html: true,
 
             // The HTML for each card
             card_html: $persist(null),
@@ -228,7 +228,19 @@
             <nav class="noprint">
                 <div class="controls" x-data="{settings_open: true}" :class='[settings_open ? "open" : "closed"]'>
                     <h1 @click="settings_open = !settings_open"><img src="/docs/im/icon_and_logotype-180.png" class="logo"> Settings</h1>
+                    <h2 class="reminders">Reminders</h2>
+                    <ul>
+                        <li>Print with miniimum margins</li>
+                    </ul>
+                    <h2 class="todo">Todo</h2>
+                    <ul>
+                        <li>Improve parity of html vs print display</li>
+                        <li>Resize text to fit width</li>
+                        <li>Type to rotate title 90 degrees</li>
+                        <li>Incorporate changes cleanly as example</li>
+                    </ul>
                     <div class="group" x-data="{open: true}" :class='[open ? "open" : "closed"]'>
+
                         <h2 class="group-title" @click="open = !open">Card Settings</h2>
                         <div class="inputs">
                             <div class="field">
@@ -254,7 +266,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="group" x-data="{open: true}" :class='[open ? "open" : "closed"]'>
+                    <div class="group" x-data="{open: false}" :class='[open ? "open" : "closed"]'>
                         <h2 class="group-title" @click="open = !open">Page Settings</h2>
                         <div class="inputs">
                             <div class="field">
@@ -262,6 +274,7 @@
                                 <select x-model="page_name" id="page_name" name="page_name">
                                     <option value="auto">Auto</option>
                                     <option value="individual">Individual</option>
+                                    <option value="letter">Letter</option>
                                     <option value="a4">A4</option>
                                     <option value="a3">A3</option>
                                     <option value="a2">A2</option>

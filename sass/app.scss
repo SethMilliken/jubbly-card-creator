@@ -7,7 +7,7 @@
     --card-bleed: 3mm;
 
     --page-width: 210mm;
-    --page-height: 297mm;
+    --page-height: 295mm;
 
     --card-rows-per-page: 3;
     --card-cols-per-page: 3;
@@ -15,7 +15,7 @@
     --center-horizontally: 1;
     --center-vertically: 1;
 
-    --page-name: a4;
+    --page-name: auto;
 
     // calculated variables, for convenience
     --card-full-width: calc(var(--card-width) + var(--card-bleed) * 2);
@@ -25,6 +25,10 @@
     // centering the content
     --page-margin-x: calc(var(--center-horizontally) * ((var(--page-width) - (var(--card-cols-per-page) * var(--card-full-width)))/2));
     --page-margin-y: calc(var(--center-vertically) * ((var(--page-height) - (var(--card-rows-per-page) * var(--card-full-height)))/2));
+
+    // print cut lines
+    --print-cut-lines: 1px solid rgba(0,0,0,0.25);
+    //--print-cut-lines: none;
 }
 
 $c-bg: rgb(245,245,235);
@@ -137,7 +141,7 @@ $font-sans: 'Helvetica', 'Segoe-Ui', 'Roboto', sans-serif;
 #cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 10mm;
+    gap: 1mm;
     justify-content: center;
 }
 
@@ -184,8 +188,13 @@ $font-sans: 'Helvetica', 'Segoe-Ui', 'Roboto', sans-serif;
     @page a1 {
         size: a1 portrait;
     }
+
     @page a0 {
         size: a0 portrait;
+    }
+
+    @page letter {
+        size: letter portrait;
     }
 
     // The individual page setting has some special
@@ -204,6 +213,7 @@ $font-sans: 'Helvetica', 'Segoe-Ui', 'Roboto', sans-serif;
     .card {
         break-inside: avoid;
         page-break-inside: avoid;
+        border: var(--print-cut-lines);
     }
 
     // Stuff that shouldn't print (basically everything except the cards)
@@ -236,13 +246,15 @@ $font-sans: 'Helvetica', 'Segoe-Ui', 'Roboto', sans-serif;
     .print-a0 {
         page: a0;
     }
+    .print-letter {
+        page: letter;
+    }
     // The individual page setting has some special
     // settings to make sure it prints one card per page exactly
     .print-individual {
         page: individual;
         .card {
             outline: 0;
-            border: none;
             page-break-after: always;
             overflow: hidden;
         }
