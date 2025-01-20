@@ -1,5 +1,7 @@
 id,quantity,name,description,type,stat_atk,stat_healing,cost,image
 test,1,Really Really Long Description Here,,label,,,,
+test,1,Really Really Really Really Really Really Really Really Really Really Really Really Really Really Really Really Really Really Long Description Here,That was actually the title not the description so here‘s an even longer bunch of text to really try to get the point across that we could be talking vast numbers of words here really unknowable uncountable but definitely not infinite words that stretch on and on until who knows when and all of course as part of one phrase beacuse we‘re in a CSV here and so can‘t use commas without it being painful or maybe just very slightly awkward like maybe just a backslash would be fine or some quotation marks but we‘re so far through it now it seems wrong to start adding commas willy-nilly potentially ending the bit before true comedy has landed,label,,,,
+test,1,Really Really Really Really Really Really Really Really Really Really Really Really Really Really Really Really Really Really Long Description Here,here’s some text that is still pretty long but not quite as long as the ridiculous prior example,label,,,,
 12-gauge-pigtails,1,12 Gauge Pigtails,,label,,,,
 12-gauge-pigtails-ground,1,12 Gauge Pigtails (Ground),,label,,,,
 14-gauge-pigtails,1,14 Gauge Pigtails,,label,,,,

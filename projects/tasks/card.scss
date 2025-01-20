@@ -25,7 +25,7 @@ $types:
     --image-width: var(--available-width);
     --image-height: var(--available-width);
     --desc-overlap: 10mm;
-    --desc-height: calc((var(--available-height) - (var(--image-height) + var(--title-height) + var(--stat-height))) + var(--desc-overlap));
+    --desc-height: 70mm;
 
     font-family: "Ubuntu Mono", monospace;
     font-optical-sizing: auto;
@@ -83,7 +83,7 @@ $types:
             z-index: -1;
         }
         .description {
-            --top-margin: -10mm;
+            // --top-margin: -10mm;
             width: 100%;
             height: var(--desc-height);
             margin-top: var(--top-margin);
