@@ -339,6 +339,7 @@ function createToc() {
       window.permalink_to ?? 4
     );
     contents.innerHTML = createTOCListHtml(tocList, 'main-');
+    
   }
 }
 
@@ -348,5 +349,12 @@ document.addEventListener('DOMContentLoaded', () => {
   insertFileContents();
   createToc();
 });
+
+document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
+    setTimeout( () => textFit(document.getElementsByTagName("h1")), "10");
+    setTimeout( () => textFit(document.getElementsByClassName("description")), "10");
+  }
+}
 
 console.log('App running successfully');
